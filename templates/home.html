@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Insurance Bill</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1> Cardio-Prediction</h1>
+	<h2> Please Enter the reports of a Person</h2>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="age" placeholder="Age" required="required" />
+    	<input type="text" name="height" placeholder="height" required="required" />
+        <input type="text" name="weight" placeholder="weight" required="required" />
+        <input type="text" name="ap_hi" placeholder="ap_hi" required="required" />
+        <input type="text" name="ap_lo" placeholder="ap_lo" required="required" />
+        <input type="text" name="Male_2" placeholder="Male_2" required="required" />
+        <input type="text" name="Normal_2" placeholder="Normal_2" required="required" />
+        <input type="text" name="Normal_3" placeholder="Normal_3" required="required" />
+        <input type="text" name="gluc_2" placeholder="gluc_2" required="required" />
+        <input type="text" name="gluc_3" placeholder="gluc_3" required="required" />
+        <input type="text" name="smoke_1" placeholder="smoke_1" required="required" />
+        <input type="text" name="alco_1" placeholder="alco_1" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{pred}}
+
+</body>
+</html>
